@@ -1,4 +1,4 @@
-<a href="https://lukaszkrzeminski.github.io/todo-list/"><img width=250px src="public/logo.png" title="Todo list logo" alt="logo listy zadań"></a>
+<a href="https://lukaszkrzeminski.github.io/todo-list-react/"><img width=250px src="public/logo.png" title="Todo list logo" alt="logo listy zadań"></a>
 
 # A simple To do list - this time in React!
 
