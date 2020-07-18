@@ -1,0 +1,60 @@
+.list__functionButton {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list__button--showDone {
+    border: none;
+    background-color: white;
+    width: auto;
+    color: hsl(180, 100%, 25%);
+    transition: 1s;
+}
+
+.list__button--showDone:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.list__button--showDone:active {
+    color: hsl(180, 100%, 45%);
+}
+
+.list__button--showDone:disabled {
+    color: grey;
+}
+
+.list__button--checkAll {
+    border: none;
+    background-color: white;
+    width: auto;
+    color: teal;
+    transition: 1s;
+}
+
+.list__button--checkAll:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.list__button--checkAll:active {
+    color: hsl(180, 100%, 45%);
+}
+
+.list__button--checkAll:disabled {
+    color: grey;
+}
+
+@media (max-width: 767px) {
+    .list__functionButton {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .list__button--showDone{
+        padding: 10px 0;
+    }
+
+    .list__button--checkAll{
+        padding: 10px 0;
+    }
+}
