@@ -1,4 +1,4 @@
-<a href="https://lukaszkrzeminski.github.io/todo-list/"><img width=250px src="img/logo.png" title="Todo list logo" alt="logo listy zadań"></a>
+<a href="https://lukaszkrzeminski.github.io/todo-list/"><img width=250px src="public/logo.png" title="Todo list logo" alt="logo listy zadań"></a>
 
 # A simple To do list - this time in React!
 
@@ -24,9 +24,6 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - added button that hides all tasks marked as done
 
 - saving the list in Local storage
-
-### Preview
-![Preview GIF](img/preview.gif)
 
 ### Technologies Used
 
