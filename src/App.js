@@ -10,7 +10,7 @@ const taskTable = [
   { id: 1, content: "Undone task 1", done: false },
   { id: 2, content: "Done task 2", done: true },
 ];
-const hideDoneTasks = false;
+const hideDone = false;
 
 function App() {
   return (
@@ -20,10 +20,10 @@ function App() {
 
       <List
         taskTable={taskTable}
-        hideDoneTasks={hideDoneTasks}
+        hideDone={hideDone}
         headerTitle = "Lista zadań:"
-        headerButtons={<Buttons taskTable={taskTable} hideDoneTasks={hideDoneTasks} />} 
-        body={<Tasks taskTable={taskTable} hideDoneTasks={hideDoneTasks} />}
+        headerButtons={<Buttons taskTable={taskTable} hideDone={hideDone} />} 
+        body={<Tasks taskTable={taskTable} hideDone={hideDone} />}
       />
     </Main>
   );

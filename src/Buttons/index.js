@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const Buttons = ({ hideDoneTasks, taskTable }) => {
+const Buttons = ({ hideDone, taskTable }) => {
     if (taskTable.length === 0) {
         return null;
     }
@@ -11,7 +11,7 @@ const Buttons = ({ hideDoneTasks, taskTable }) => {
             <button
                 className="list__button--showDone"
             >
-                {hideDoneTasks ? "Wyświetl" : "Ukryj"} wykonane
+                {hideDone ? "Wyświetl" : "Ukryj"} wykonane
             </button>
             <button
                 className="list__button--checkAll"
