@@ -6,17 +6,20 @@ import Buttons from "./Buttons";
 import Header from "./Header";
 import Main from "./Main";
 
-const taskTable = [
-  { id: 1, content: "Undone task 1", done: false },
-  { id: 2, content: "Done task 2", done: true },
-];
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
+  const [taskTable, setTaskTable] = useState([
+    { id: 1, content: "Undone task 1", done: false },
+    { id: 2, content: "Done task 2", done: true },
+  ]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
+
+  const removeTask = (id) => {
+    setTaskTable(taskTable => taskTable.filter(taskTable => taskTable.id !== id));
+  }
 
   return (
     <Main>
@@ -28,7 +31,7 @@ function App() {
         hideDone={hideDone}
         headerTitle="Lista zadań:"
         headerButtons={<Buttons taskTable={taskTable} hideDone={hideDone} toggleHideDone={toggleHideDone} />}
-        body={<Tasks taskTable={taskTable} hideDone={hideDone} />}
+        body={<Tasks taskTable={taskTable} hideDone={hideDone} removeTask={removeTask} />}
       />
     </Main>
   );

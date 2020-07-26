@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const List = ({ taskTable, hideDone, headerTitle, headerButtons, body }) => (
+const List = ({ headerTitle, headerButtons, body }) => (
     <div className="list">
         <h2 className="list__header">
             {headerTitle}
