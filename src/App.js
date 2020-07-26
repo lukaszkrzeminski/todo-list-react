@@ -17,6 +17,13 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
+  const setAllDone = () => {
+    setTaskTable(taskTable => taskTable.map(task => ({
+      ...task,
+      done: true,
+    })));
+  }
+
   const removeTask = (id) => {
     setTaskTable(taskTable => taskTable.filter(taskTable => taskTable.id !== id));
   };
@@ -39,7 +46,13 @@ function App() {
         taskTable={taskTable}
         hideDone={hideDone}
         headerTitle="Lista zadań:"
-        headerButtons={<Buttons taskTable={taskTable} hideDone={hideDone} toggleHideDone={toggleHideDone} />}
+        headerButtons={
+          <Buttons
+            taskTable={taskTable}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            setAllDone={setAllDone}
+          />}
         body={
           <Tasks
             taskTable={taskTable}
