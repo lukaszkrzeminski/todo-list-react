@@ -19,7 +19,16 @@ function App() {
 
   const removeTask = (id) => {
     setTaskTable(taskTable => taskTable.filter(taskTable => taskTable.id !== id));
-  }
+  };
+
+  const toggleTaskDone = (id) => {
+    setTaskTable(taskTable => taskTable.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }));
+  };
 
   return (
     <Main>
@@ -31,7 +40,13 @@ function App() {
         hideDone={hideDone}
         headerTitle="Lista zadań:"
         headerButtons={<Buttons taskTable={taskTable} hideDone={hideDone} toggleHideDone={toggleHideDone} />}
-        body={<Tasks taskTable={taskTable} hideDone={hideDone} removeTask={removeTask} />}
+        body={
+          <Tasks
+            taskTable={taskTable}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
+          />}
       />
     </Main>
   );
