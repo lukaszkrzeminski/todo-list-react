@@ -37,10 +37,21 @@ function App() {
     }));
   };
 
+  const addNewTask = (content) => {
+    setTaskTable(taskTable => [
+      ...taskTable,
+      {
+        content,
+        done: false,
+        id: taskTable.length === 0 ? 1 : taskTable[taskTable.length - 1].id + 1,
+      }
+    ])
+  }
+
   return (
     <Main>
       <Header title="Lista zadań" />
-      <Form />
+      <Form addNewTask={addNewTask} />
 
       <List
         taskTable={taskTable}
