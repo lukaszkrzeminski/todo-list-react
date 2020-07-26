@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const Buttons = ({ hideDone, taskTable }) => {
+const Buttons = ({ hideDone, taskTable, toggleHideDone }) => {
     if (taskTable.length === 0) {
         return null;
     }
@@ -10,6 +10,7 @@ const Buttons = ({ hideDone, taskTable }) => {
         <span className="list__functionButton">
             <button
                 className="list__button--showDone"
+                onClick = {toggleHideDone}
             >
                 {hideDone ? "Wyświetl" : "Ukryj"} wykonane
             </button>
