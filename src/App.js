@@ -8,10 +8,9 @@ import Main from "./Main";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [taskTable, setTaskTable] = useState([
-    { id: 1, content: "Undone task 1", done: false },
-    { id: 2, content: "Done task 2", done: true },
-  ]);
+  const [taskTable, setTaskTable] = useState(
+    JSON.parse(localStorage.getItem("taskTable")) === null ? [""] : JSON.parse(localStorage.getItem("taskTable"))
+  );
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -47,6 +46,10 @@ function App() {
       }
     ])
   }
+
+
+
+
 
   return (
     <Main>

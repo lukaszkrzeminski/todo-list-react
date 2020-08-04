@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./style.css";
 
-const Tasks = ({ taskTable, hideDone, removeTask, toggleTaskDone }) => (
+const Tasks = ({ taskTable, hideDone, removeTask, toggleTaskDone }) => {
+
+    useEffect( () => {
+        localStorage.setItem("taskTable", JSON.stringify(taskTable));
+    }, [taskTable]);
+    
+    return (
     <ul className="list__tasks">
         {taskTable.map(task =>
             <li key={task.id} className={`list__item ${task.done && hideDone ? "list__item--hidden" : ""}`}>
@@ -21,6 +27,6 @@ const Tasks = ({ taskTable, hideDone, removeTask, toggleTaskDone }) => (
             </li>
         )}
     </ul>
-);
+)};
 
 export default Tasks;
