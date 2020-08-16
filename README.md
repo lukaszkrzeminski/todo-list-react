@@ -22,8 +22,7 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - added feature that sets focus on the input after user enters a task
 - added button that marks all tasks as done
 - added button that hides all tasks marked as done
-
-- saving the list in Local storage
+- saving the list in Local storage feature added
 
 ### Technologies Used
 
