@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./style.css";
 
 const Tasks = ({ taskTable, hideDone, removeTask, toggleTaskDone }) => {
-
-    useEffect( () => {
-        localStorage.setItem("taskTable", JSON.stringify(taskTable));
-    }, [taskTable]);
     
     return (
     <ul className="list__tasks">
