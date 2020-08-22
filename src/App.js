@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Form from "./Form";
 import List from "./List";
 import Tasks from "./Tasks";
@@ -51,14 +51,18 @@ function App() {
     ])
   }
 
+const inputRef = useRef(null);
 
+  const focusInput = () => {
+    inputRef.current.focus();
+  }
 
 
 
   return (
     <Main>
       <Header title="Lista zadań" />
-      <Form addNewTask={addNewTask} />
+      <Form addNewTask={addNewTask} focusInput={focusInput} inputRef={inputRef} />
 
       <List
         taskTable={taskTable}
