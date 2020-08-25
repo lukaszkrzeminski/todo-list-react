@@ -1,14 +1,16 @@
-.form{
+import styled from "styled-components";
+
+export const Formular = styled.form`
     background-color: white;
     border: lightgrey 1px solid;
-}
+`;
 
-.form__label{
+export const Label = styled.label`
     display: flex;
     flex-wrap: wrap;
-}
+`;
 
-.form__header{
+export const Header = styled.h2`
     background-color: white;
     margin: 0;
     padding: 15px;
@@ -16,15 +18,19 @@
     border-bottom: lightgrey 2px solid;
     flex-basis: 100%;
     flex-grow: 1;
-}
+`;
 
-.form__input{
+export const Input = styled.input`
     padding: 5px 20px;
     margin: 20px 15px;
     flex-grow: 1;
-}
 
-.form__button{
+    @media (max-width: 767px){
+        margin: 10px 15px;
+    }
+`;
+
+export const Button = styled.button`
     width: auto;
     padding: 10px;
     margin: 20px 15px;
@@ -33,25 +39,19 @@
     border: none;
     flex-grow: 0;
     transition: 1s;
-}
 
-.form__button:hover{
-    background-color: hsl(180, 100%, 35%);
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.form__button:active{
-    background-color: hsl(180, 100%, 45%);
-}
-
-@media (max-width: 767px){
-    .form__input{
-        margin: 10px 15px;
+    &:hover {
+        background-color: hsl(180, 100%, 35%);
+        transform: scale(1.1);
+        cursor: pointer;
     }
 
-    .form__button{
+    &:active {
+        background-color: hsl(180, 100%, 45%);
+    }
+
+    @media (max-width: 767px){
         flex-grow: 1;
         margin: 10px 15px;
     }
-}
+`;

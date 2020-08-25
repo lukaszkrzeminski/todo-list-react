@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+import {FunctionButton, Button} from "./styled";
 
 const Buttons = ({ hideDone, taskTable, toggleHideDone, setAllDone }) => {
     if (taskTable.length === 0) {
@@ -7,21 +7,21 @@ const Buttons = ({ hideDone, taskTable, toggleHideDone, setAllDone }) => {
     }
 
     return (
-        <span className="list__functionButton">
-            <button
-                className="list__button--showDone"
+        <FunctionButton>
+            <Button
+                showDone
                 onClick={toggleHideDone}
             >
                 {hideDone ? "Wyświetl" : "Ukryj"} wykonane
-            </button>
-            <button
-                className="list__button--checkAll"
+            </Button>
+            <Button
+                checkAll
                 onClick={setAllDone}
                 disabled={taskTable.every(({ done }) => done)}
             >
                 Zakończ wszystkie
-            </button>
-        </span>
+            </Button>
+        </FunctionButton>
     )
 };
 

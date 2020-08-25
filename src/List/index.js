@@ -1,14 +1,14 @@
 import React from 'react';
-import "./style.css";
+import {ListDiv, Header} from "./styled";
 
 const List = ({ headerTitle, headerButtons, body }) => (
-    <div className="list">
-        <h2 className="list__header">
+    <ListDiv>
+        <Header>
             {headerTitle}
             {headerButtons}
-        </h2>
+        </Header>
         {body}
-    </div>
+    </ListDiv>
 );
 
 export default List;
