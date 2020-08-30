@@ -31,6 +31,8 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - BEM methodology
 - JS, immutability
 - React.js
+- Styled components
+- Custom hooks
 
 ### Author
 Łukasz Krzemiński
