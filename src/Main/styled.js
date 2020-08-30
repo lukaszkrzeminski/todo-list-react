@@ -5,7 +5,7 @@ export const MainContainer = styled.main`
     margin: 60px auto;
     padding: 10px;
 
-    @media (max-width: 767px){
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px){
         margin: 20px auto;
     }
 `;

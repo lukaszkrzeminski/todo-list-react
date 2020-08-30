@@ -5,7 +5,7 @@ export const FunctionButton = styled.span`
     display: flex;
     justify-content: flex-end;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -14,40 +14,40 @@ export const FunctionButton = styled.span`
 export const Button = styled.button`
     ${({showDone}) => showDone && css`
         border: none;
-        background-color: white;
+        background-color: ${({theme}) => theme.color.white};
         width: auto;
-        color: hsl(180, 100%, 25%);
+        color: ${({theme}) => theme.color.teal};
         transition: 1s;
         &:hover {
-            color: hsl(180, 100%, 35%);
+            filter: brightness(110%);
         }
         &:active {
-            color: hsl(180, 100%, 45%);
+            filter: brightness(120%);
         }
         &:disabled {
-            color: grey;
+            color: ${({theme}) => theme.color.grey};
         }
-        @media (max-width: 767px) {
+        @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
             padding: 10px 0;
         }
     `}
 
     ${({checkAll}) => checkAll && css`
         border: none;
-        background-color: white;
+        background-color: ${({theme}) => theme.color.white};
         width: auto;
-        color: teal;
+        color: ${({theme}) => theme.color.teal};
         transition: 1s;
         &:hover {
-            color: hsl(180, 100%, 35%);
+            filter: brightness(110%);
         }
         &:active {
-            color: hsl(180, 100%, 45%);
+            filter: brightness(120%);
         }
         &:disabled {
-            color: grey;
+            color: ${({theme}) => theme.color.grey};
         }
-        @media (max-width: 767px) {
+        @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
             padding: 10px 0;
         }
     `}

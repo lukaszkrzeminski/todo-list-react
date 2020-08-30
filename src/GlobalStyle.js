@@ -13,6 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     body{
          font-family: 'Lato', sans-serif;
          margin: 10px;
-         background-color: lightgrey;
+         background-color: ${({theme}) => theme.color.alto};
     }
 `;
