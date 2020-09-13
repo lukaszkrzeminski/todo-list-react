@@ -6,6 +6,7 @@ import { selectTasks, toggleTaskDone, removeTask } from '../tasksSlice';
 
 const TaskList = () => {
     const {taskTable, hideDone} = useSelector(selectTasks);
+
     const dispatch = useDispatch();
     return (
     <TasksList>
