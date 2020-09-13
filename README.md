@@ -23,6 +23,7 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - added button that marks all tasks as done
 - added button that hides all tasks marked as done
 - saving the list in Local storage feature added
+- tasks management moved to Redux
 
 ### Technologies Used
 
@@ -33,6 +34,7 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - React.js
 - Styled components
 - Custom hooks
+- Redux
 
 ### Author
 Łukasz Krzemiński
