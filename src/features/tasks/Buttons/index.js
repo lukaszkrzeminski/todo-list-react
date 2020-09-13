@@ -1,7 +1,12 @@
 import React from 'react';
+import { useSelector, useDispatch} from "react-redux";
 import {FunctionButton, Button} from "./styled";
+import { selectTasks, toggleHideDone, setAllDone} from "../tasksSlice";
 
-const Buttons = ({ hideDone, taskTable, toggleHideDone, setAllDone }) => {
+const Buttons = () => {
+    const {taskTable, hideDone} = useSelector(selectTasks);
+    const dispatch = useDispatch();
+
     if (taskTable.length === 0) {
         return null;
     }
@@ -10,13 +15,13 @@ const Buttons = ({ hideDone, taskTable, toggleHideDone, setAllDone }) => {
         <FunctionButton>
             <Button
                 showDone
-                onClick={toggleHideDone}
+                onClick={() => dispatch(toggleHideDone())}
             >
                 {hideDone ? "Wyświetl" : "Ukryj"} wykonane
             </Button>
             <Button
                 checkAll
-                onClick={setAllDone}
+                onClick={() => dispatch(setAllDone())}
                 disabled={taskTable.every(({ done }) => done)}
             >
                 Zakończ wszystkie
