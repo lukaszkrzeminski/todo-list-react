@@ -18,6 +18,8 @@ export const Header = styled.h2`
     border-bottom: ${({theme}) => theme.color.alto} 2px solid;
     flex-basis: 100%;
     flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
 `;
 
 export const Input = styled.input`
@@ -30,7 +32,7 @@ export const Input = styled.input`
     }
 `;
 
-export const Button = styled.button`
+export const ButtonAdd = styled.button`
     width: auto;
     padding: 10px;
     margin: 20px 15px;

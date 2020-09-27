@@ -21,12 +21,24 @@ const tasksSlice = createSlice({
             state.taskTable.splice(index, 1);
         },
         setAllDone: state => {
-            for( const task of state.taskTable){
+            for (const task of state.taskTable) {
                 task.done = true;
             };
         },
+        fetchExampleTasks: () => { },
+        setTasks: (state, {payload: taskTable}) => {
+            state.taskTable = taskTable;
+        },
     },
 });
-export const { addNewTask, toggleHideDone, toggleTaskDone, removeTask, setAllDone } = tasksSlice.actions;
+export const {
+    addNewTask,
+    toggleHideDone,
+    toggleTaskDone,
+    removeTask,
+    setAllDone,
+    fetchExampleTasks,
+    setTasks,
+} = tasksSlice.actions;
 export const selectTasks = state => state.taskTable;
 export default tasksSlice.reducer;
