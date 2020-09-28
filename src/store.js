@@ -12,10 +12,6 @@ const store = configureStore({
     middleware: [sagaMiddleware],
 });
 
-store.subscribe(() => {
-    localStorage.setItem("taskTable", JSON.stringify(store.getState().taskTable.taskTable));
-});
-
 sagaMiddleware.run(rootSaga);
 
 export default store;
