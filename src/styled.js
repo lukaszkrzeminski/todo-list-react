@@ -7,7 +7,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
     activeClassName,
 }))`
     &.${activeClassName}{
-        background-color: ${({ theme }) => theme.color.grey};
+        font-weight: bold;
     }
     text-decoration: none;
     color: ${({theme}) => theme.color.white};
