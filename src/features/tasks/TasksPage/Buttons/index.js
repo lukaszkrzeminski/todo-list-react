@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { FunctionButton, Button } from "../styledHeaderButtons";
-import { selectTasks, selectHideDone, toggleHideDone, setAllDone } from "../tasksSlice";
+import { FunctionButton, Button } from "../../styledHeaderButtons";
+import { selectTasks, selectHideDone, toggleHideDone, setAllDone } from "../../tasksSlice";
 
 const Buttons = () => {
     const taskTable = useSelector(selectTasks);

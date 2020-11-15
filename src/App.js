@@ -1,8 +1,9 @@
 import React from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import { StyledNavLink, StyledList } from "./styled";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import TasksPage from "./features/tasks/TasksPage";
+import AuthorPage from "./features/author/AuthorPage";
+import TaskPage from "./features/tasks/TaskPage";
 
 export default () => (
     <HashRouter>
@@ -16,14 +17,17 @@ export default () => (
                 </li>
             </StyledList>
             <Switch>
+                <Route path="/lista-zadan/:id">
+                    <TaskPage />
+                </Route>
                 <Route path="/lista-zadan">
-                    <Tasks />
+                    <TasksPage />
                 </Route>
                 <Route path="/o-autorze">
-                    <Author />
+                    <AuthorPage />
                 </Route>
                 <Route path="/">
-                    <Redirect to="/lista-zadan"/>
+                    <Redirect to="/lista-zadan" />
                 </Route>
             </Switch>
         </nav>

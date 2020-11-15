@@ -3,7 +3,7 @@ import Main from "../../common/Main";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 
-function Author() {
+function AuthorPage() {
 
     return (
         <Main>
@@ -25,4 +25,4 @@ function Author() {
     );
 }
 
-export default Author;
+export default AuthorPage;
