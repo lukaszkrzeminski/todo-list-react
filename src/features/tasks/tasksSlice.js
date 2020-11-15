@@ -29,7 +29,7 @@ const tasksSlice = createSlice({
             };
         },
         fetchExampleTasks: () => { },
-        setTasks: (state, {payload: taskTable}) => {
+        setTasks: (state, { payload: taskTable }) => {
             state.taskTable = taskTable;
         },
         loadExampleTasks: (state, action) => {
@@ -54,5 +54,11 @@ export const selectTasks = state => selectTasksState(state).taskTable;
 export const selectHideDone = state => selectTasksState(state).hideDone;
 export const selectExampleTasks = state => selectTasksState(state).loading;
 export const getTaskById = (state, taskId) =>
-    selectTasks(state).find(({id}) => id === taskId);
+    selectTasks(state).find(({ id }) => id === taskId);
+export const selectTasksByQuery = (state, query) => {
+    if(!query || query === "") {
+        return selectTasksState(state).taskTable;
+    }
+    return selectTasks(state).filter(({ content }) => content.toUpperCase().includes(query.trim().toUpperCase()));
+};
 export default tasksSlice.reducer;

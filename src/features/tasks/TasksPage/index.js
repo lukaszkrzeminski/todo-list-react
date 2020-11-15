@@ -5,7 +5,6 @@ import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Header from "../../../common/Header";
 import Main from "../../../common/Main";
-import { useLocation } from 'react-router-dom';
 
 function TasksPage() {
   
@@ -14,8 +13,6 @@ function TasksPage() {
   const focusInput = () => {
     inputRef.current.focus();
   }
-
-  const location = useLocation();
 
   return (
     <Main>
