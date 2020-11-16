@@ -5,9 +5,11 @@ import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Header from "../../../common/Header";
 import Main from "../../../common/Main";
+import Section from '../../../common/Section';
+import Search from './Search';
 
 function TasksPage() {
-  
+
   const inputRef = useRef(null);
 
   const focusInput = () => {
@@ -18,7 +20,10 @@ function TasksPage() {
     <Main>
       <Header title="Lista zadań" />
       <Form focusInput={focusInput} inputRef={inputRef} />
-
+      <Section
+        contentHeader="Wyszukiwarka"
+        contentBody={<Search />}>
+      </Section>
       <List
         headerTitle="Lista zadań:"
         headerButtons={

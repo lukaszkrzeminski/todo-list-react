@@ -4,7 +4,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.color.white};
     border: ${({theme}) => theme.color.alto} 1px solid;
     padding: 10px 20px;
-    border-radius: 30px;
+    margin-top: 15px;
 `;
 
 export const Paragraph = styled.p`
@@ -15,7 +15,7 @@ export const Paragraph = styled.p`
 
 export const ParagraphHeader = styled.span`
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     margin: 0;
     padding: 10px 0;
     border-bottom: ${({theme}) => theme.color.alto} 2px solid;

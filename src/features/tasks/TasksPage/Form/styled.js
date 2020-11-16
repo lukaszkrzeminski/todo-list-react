@@ -22,16 +22,6 @@ export const Header = styled.h2`
     justify-content: space-between;
 `;
 
-export const Input = styled.input`
-    padding: 5px 20px;
-    margin: 20px 15px;
-    flex-grow: 1;
-
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px){
-        margin: 10px 15px;
-    }
-`;
-
 export const ButtonAdd = styled.button`
     width: auto;
     padding: 10px;
