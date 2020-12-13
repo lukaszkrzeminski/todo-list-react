@@ -9,6 +9,10 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
     &.${activeClassName}{
         font-weight: bold;
     }
+    &:hover{
+        cursor: pointer;
+        border-bottom: 1px solid;
+    }
     text-decoration: none;
     color: ${({theme}) => theme.color.white};
     font-size: 20px;
@@ -17,7 +21,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 
 export const StyledList = styled.ul`
     background-color: ${({theme}) => theme.color.teal};
-    padding: 10px 0;
+    padding: 20px 0;
     margin: 0;
     list-style: none;
     display: flex;
