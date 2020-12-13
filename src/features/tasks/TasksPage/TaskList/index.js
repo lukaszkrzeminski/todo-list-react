@@ -4,13 +4,14 @@ import { TasksList, Item, Content, Button, StyledLink } from "./styled"
 import { selectHideDone, toggleTaskDone, removeTask, selectTasksByQuery } from '../../tasksSlice';
 import { useLocation } from 'react-router-dom';
 import searchQueryParameterName from '../searchQueryParameterName';
+import { toTask } from '../../../../routes';
 
 
 const TaskList = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get(searchQueryParameterName);
-    
+
     const taskTable = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
 
@@ -26,7 +27,7 @@ const TaskList = () => {
                         {task.done ? "✔" : " "}
                     </Button>
                     <Content done={task.done}>
-                        <StyledLink to={`/lista-zadan/${task.id}`}>{task.content}</StyledLink>
+                        <StyledLink to={toTask({ id: task.id })}>{task.content}</StyledLink>
                     </Content>
                     <Button
                         remove

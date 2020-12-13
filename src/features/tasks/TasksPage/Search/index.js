@@ -5,29 +5,21 @@ import searchQueryParameterName from "../searchQueryParameterName";
 import { Wrapper } from "./styled";
 
 export default () => {
+    const useQueryParameter = (searchQueryParameterName) => {
+        (new URLSearchParams(location.search).get(searchQueryParameterName));
+    }
+
     const location = useLocation();
     const history = useHistory();
-    const query = (new URLSearchParams(location.search).get(searchQueryParameterName));
+    const query = useQueryParameter();
 
-    const onInputChange = ({target}) => {
-        const searchParams = new URLSearchParams(location.search);
-
-        if(target.value.trim() === ""){
-            searchParams.delete(searchQueryParameterName);
-        } else {
-            searchParams.set(searchQueryParameterName, target.value);
-        }
-
-        history.push(`${location.pathname}?${searchParams.toString()}`);
-    };
-
-    return(
+    return (
         <Wrapper>
-            <Input 
-            placeholder="Filtruj zadania"
-            value={query || ""}
-            onChange={onInputChange}
-        />
+            <Input
+                placeholder="Filtruj zadania"
+                value={query || ""}
+
+            />
         </Wrapper>
     )
 }
