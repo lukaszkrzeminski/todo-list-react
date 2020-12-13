@@ -1,24 +1,26 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router-dom";
 import Input from "../../Input";
+import { useQueryParameter, useReplaceQueryParameter } from "../queryParameters";
 import searchQueryParameterName from "../searchQueryParameterName";
 import { Wrapper } from "./styled";
 
 export default () => {
-    const useQueryParameter = (searchQueryParameterName) => {
-        (new URLSearchParams(location.search).get(searchQueryParameterName));
-    }
+    const query = useQueryParameter(searchQueryParameterName);
+    const replaceQueryParameter = useReplaceQueryParameter();
 
-    const location = useLocation();
-    const history = useHistory();
-    const query = useQueryParameter();
+    const onInputChange = ({ target }) => {
+        replaceQueryParameter({
+            key: searchQueryParameterName,
+            value: target.value.trim() !== "" ? target.value : undefined,
+        });
+    };
 
     return (
         <Wrapper>
             <Input
                 placeholder="Filtruj zadania"
                 value={query || ""}
-
+                onChange={onInputChange}
             />
         </Wrapper>
     )
