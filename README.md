@@ -46,6 +46,24 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - Redux, Redux Saga, Redux toolkit
 - Async functions
 
+### Short Preview
+
+1. Fetching example tasks:
+
+<img src="preview_example_tasks.gif" alt="adding example tasks" width=250px />
+
+2. Adding new Task:
+
+<img src="preview_new_task.gif" alt="adding new task" width=250px />
+
+3. Single Task Page:
+
+<img src="preview_single_task.gif" alt="single task page" width=250px />
+
+4. Searching for tasks:
+
+<img src="preview_searching_tasks.gif" alt="searching for tasks" width=250px />
+
 ### Author
 Łukasz Krzemiński
 
