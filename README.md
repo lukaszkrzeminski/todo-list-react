@@ -14,6 +14,9 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - Delete a task
 - Mark all task as done
 - Hide all done tasks
+- Check any single task by clicking it
+- Search for tasks
+- Add simple example tasks
 
 ### Added features and future work
 
@@ -24,6 +27,10 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - added button that hides all tasks marked as done
 - saving the list in Local storage feature added
 - tasks management moved to Redux
+- added author page using React router
+- clicking on a task moves to the current task page
+- added feature that allows to search tasks by name
+
 
 ### Technologies Used
 
@@ -31,10 +38,11 @@ It's a simple page where user can add / check / delete tasks to do. It is my tod
 - CSS
 - BEM methodology
 - JS, immutability
-- React.js
+- React.js, React Router
 - Styled components
 - Custom hooks
-- Redux
+- Redux, Redux Saga, Redux toolkit
+- Async functions
 
 ### Author
 Łukasz Krzemiński
