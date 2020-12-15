@@ -1,5 +1,7 @@
 <a href="https://lukaszkrzeminski.github.io/todo-list-react/"><img width=250px src="public/logo.png" title="Todo list logo" alt="logo listy zadań"></a>
 
+*Click on the image below to check the demo*
+
 # A simple To do list - this time in React!
 
 ## A website that allows you to create a task list: add new tasks to do, mark them as done or delete them.
